@@ -14,3 +14,7 @@
 
   ## 문장 랜덤 도출 
    -> use-cookie 훅을 사용하여 문장을 랜덤으로 도출한다. 
+
+ ## async storage 설치 
+  -> npx expo install @react-native-async-storage/async-storage
+  -> 사용자가 선택한 언어를 기억한다.

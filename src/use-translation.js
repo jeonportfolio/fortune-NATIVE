@@ -1,6 +1,8 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getLocales } from 'expo-localization';
 import { I18n } from 'i18n-js';
 import { useEffect, useState } from 'react';
+
 
 const ko = require('./lang/lang.ko.json');
 const en = require('./lang/lang.en.json');
@@ -18,11 +20,30 @@ const i18n = new I18n({
 
 const deviceLanguage = getLocales()[2].languageCode;
 
+const LOCALE_KEY = " locale2";
+
 export const useTranslation = () => {
-    const [locale, setLocale] = useState(null);
+    const [locale, _setLocale] = useState(null);
+
+    const setLocale = (v) => {
+        _setLocale(v);
+        AsyncStorage.setItem(LOCALE_KEY, v);
+        
+    };
+
+    const init = async () => { 
+        const fs = await AsyncStorage.getItem(LOCALE_KEY);
+        if(fs !== null){
+            _setLocale(fs);
+        } else {
+            _setLocale(deviceLanguage);
+        }
+    }
+
+   
 
     useEffect( () => {
-        setLocale(deviceLanguage);
+        init();
     },[]);
 
     return{
