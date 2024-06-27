@@ -18,3 +18,7 @@
  ## async storage 설치 
   -> npx expo install @react-native-async-storage/async-storage
   -> 사용자가 선택한 언어를 기억한다.
+
+  ## splash screen 피그마로 그리기 
+   -> 로딩 화면 피그마로 제작 
+   ->npx expo install expo-splash-screen 로 설치
