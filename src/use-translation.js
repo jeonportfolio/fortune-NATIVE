@@ -17,6 +17,10 @@ const i18n = new I18n({
             zh,
 });
 
+i18n.enableFallback = true; // 아무 인수가 없을때 default 값으로 가능하게 해줄건지 
+i18n.defaultLocale = "ko";
+
+
 
 const deviceLanguage = getLocales()[2].languageCode;
 

@@ -19,6 +19,10 @@
   -> npx expo install @react-native-async-storage/async-storage
   -> 사용자가 선택한 언어를 기억한다.
 
-  ## splash screen 피그마로 그리기 
+  ## 로딩화면 제작 
    -> 로딩 화면 피그마로 제작 
-   ->npx expo install expo-splash-screen 로 설치
+   -> npx expo install expo-splash-screen 로 설치
+   -> 로딩속도에 맞춰 언어 default값 보여주기
+   -> Lottiefiles를 활용해 동적인 로딩화면 생성 (애니메이션을 코딩으로 용량크기 작음 -> JSON형식의 파일로 받음)
+   -> LoadingVIew.js를 통해 애니메이션화  (컴포넌트 생성)
+   -> npx expo install lottie-react-native 설치 
