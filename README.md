@@ -26,3 +26,6 @@
    -> Lottiefiles를 활용해 동적인 로딩화면 생성 (애니메이션을 코딩으로 용량크기 작음 -> JSON형식의 파일로 받음)
    -> LoadingVIew.js를 통해 애니메이션화  (컴포넌트 생성)
    -> npx expo install lottie-react-native 설치 
+
+   ## 날짜 변환 텍스트화 
+   -> react string format 설치 npm install react-string-format

@@ -11,11 +11,12 @@ import LoadingView from './src/LoadingView';
 SplashScreen.preventAutoHideAsync();//splash screen을 임의로 지우는 것을 막는다 
 
 export default function App() {
-  const { t, locale, setLocale} = useTranslation();
+  const { t, locale, setLocale, format} = useTranslation();
   const { cookieKey } = useCookie();
 
   const [isLoaded, setIsLoded] = useState(false);
 
+  const todayText = format( t('today_is'), 2024, 6, 29 );
 
   useEffect (() => {
   if (cookieKey !== "" ) {
@@ -35,7 +36,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Text>{todayText}</Text>
       <Text>{t(cookieKey)}</Text>
+
       <View style={styles.buttonsContainer}>
           <Button
               onPress = {() => setLocale("ko")}
