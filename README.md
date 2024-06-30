@@ -29,3 +29,11 @@
 
    ## 날짜 변환 텍스트화 
    -> react string format 설치 npm install react-string-format
+
+   ## 배경 화면 제작 
+   -> LottieFiles 배경으로 json형식으로 받아서 배경화면 저장 
+
+   ## 커스텀 폰트 적용
+   -> npx expo install expo-font 로 설치 
+   -> 글꼴 사용 = 리디바탕 사이트 참고 
+
